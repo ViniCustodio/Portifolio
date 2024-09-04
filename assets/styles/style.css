@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-fundo: #161616;
+    --color-menu: #bdbcbc;
+    --color-menu-hover: #FFFFFF; 
+    --color-background-button: #2e2d2d;
+
+    --font-primaria: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--color-fundo);
+    box-sizing: border-box;
+    color: var(--color-menu-hover);
+}
+
+.cabecalho{
+    margin: 0px 350px 0 350px;
+    padding: 100px 250px 0px 250px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho__logo {
+    width: 50px;
+    height: 50px;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho__menu__aba {
+    color: var(--color-menu);
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.cabecalho__menu__aba:hover {
+    scale: 1.1;
+    color: var(--color-menu-hover);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cabecalho__menu:hover .cabecalho__menu__aba:not(:hover){
+    opacity: .4;
+    transition: 0.5s;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin: 0px 350px 0 350px;
+    padding: 100px 250px 0px 250px;
+
+    width: 700px;
+}
+
+.conteudo__pagina{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-menu-hover);
+    font-family: var(--font-primaria);
+    font-size: 20px;
+    gap: 30px;
+}
+
+.conteudo__pagina__paragrafo:hover{
+    scale: 1.1;
+    transition: 0.6s;
+}
+
+.networks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.networks__subtitulo {
+    font-family: var(--font-primaria);
+}
+
+.networks__div {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 30px;
+}
+
+.networks__div__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    background-color: var(--color-background-button);
+    color: var(--color-menu-hover);
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.networks__div__link:hover {
+    transition: 0.5s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.networks__div:hover .networks__div__link:not(:hover) {
+    opacity: 0.4;
+    transition: 0.6s;
+}
+
+.tecnologia{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tecnologia__conteudo{
+    display: flex;
+    flex-direction: column;
+}
+
+.tecnologia__conteudo:hover{
+    scale: 1.1;
+    transition: 0.6s;
+}
+
+.rodape {
+    font-family: var(--font-primaria);
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    padding-bottom: 15px;
+}
+
+
+.conteudo__paragrafo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.animation {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s ease-in-out;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front {
+    transform: rotateY(0deg); /* Frente visível inicialmente */
+}
+
+.back {
+    transform: rotateY(180deg); /* Parte de trás escondida */
+    background-color: var(--color-background-button);
+    border-radius: 13px;
+}
+
+.flip {
+    transform: rotateY(180deg); /* Gira a carta quando flip é aplicado */
+}

@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/font.css">
 
     <title> Vinicius | Hobbies</title>
 </head>
@@ -11,66 +14,94 @@
 
     <header class="cabecalho"> 
 
-        <div class="cabecalho__menu__logo"> 
-            <a href="index.html" class="cabecalho__menu__aba"> <img src="images/logo.png" alt="logo"> </a>
+        <div class="cabecalho__menu"> 
+
+            <div class="cabecalho__menu__logo"> 
+                <a href="index.html" class="cabecalho__menu__aba"> <img src="images/logo.png" alt="logo"> </a>
+            </div>
+
+            <nav class="cabecalho__menu__links">
+                <a href="#" class="cabecalho__menu__links cabecalho__menu__aba"> + About </a>
+                <a href="#" class="cabecalho__menu__links cabecalho__menu__aba"> Setup </a>
+                <a href="hobbie.html" class="cabecalho__menu__links cabecalho__menu__aba"> Hobbies </a>
+            </nav>
+
+            <div> 
+                <a class="cabecalho__menu__links cabecalho__menu__aba" href=""> <img src="images/Sun.png"> </a>
+            </div>
+
         </div>
-
-        <nav class="cabecalho__menu">
-            <a href="#" class="cabecalho__menu__aba"> + About </a>
-            <a href="#" class="cabecalho__menu__aba"> Setup </a>
-            <a href="#" class="cabecalho__menu__aba"> Hobbies </a>
-        </nav>
-
+        
     </header>
 
-    <main class="conteudo"> 
+    <main class="container"> 
 
-        <section class="conteudo__pagina"> 
+        <section class="conteudo"> 
 
-            <h1> MUSIC </h1>
+            <div class="conteudo__pagina"> 
 
-            <div class="conteudo__paragrafo"> 
-                <p class="conteudo__pagina__paragrafo"> I really like listening to music, one of the things I do most in my day. </p>
-                <p class="conteudo__pagina__paragrafo"> While I'm studying, working, playing, even when I'm not doing anything. </p>
+                <h2 class="networks__subtitulo"> MUSIC </h1>
+
+                <div class="conteudo__paragrafo"> 
+                    <p class="conteudo__pagina__paragrafo"> I really like listening to music, one of the things I do most in my day. </p>
+                    <p class="conteudo__pagina__paragrafo"> While I'm studying, working, playing, even when I'm not doing anything. </p>
+                    <p class="conteudo__pagina__paragrafo"> My albumns with my favorites musics </p>
+                </div>
+
+
+                <div class="animation"> 
+
+                    <a class="animation__link__album" href="https://open.spotify.com/playlist/3wGGxTcn0OGBgCZb5JJsfx?si=91c8180c07064243"> 
+                        <div class="card" onmouseenter="playAudio('audio1')" onmouseleave="pauseAudio('audio1')"> 
+                            <div class="face front"> 
+                                Trap    
+                                <img  class="animation__link__image" src="images/album1.png">
+                            </div>
+                            <div class="face back"> 
+                                Ball w/o you
+                                <img class="animation__link__image" src="images/cape.png" >
+                            </div>
+                        </div>
+                    </a>
+                
+                    <a class="animation__link__album" href="https://open.spotify.com/playlist/4CPxc7zOxMERdSeIRVlPHu?si=846a90ef1de44616&pt=a7295758e65c1ae27e2a3f8630e36a1e"> 
+                        <div class="card" onmouseenter="playAudio('audio2')" onmouseleave="pauseAudio('audio2')"> 
+                            <div class="face front"> 
+                                Rap
+                                <img class="animation__link__image" src="images/album2.png">
+                            </div>
+                            <div class="face back"> 
+                                All Eyez On Me
+                                <img class="animation__link__image" src="images/cape2.png">
+                            </div>
+                        </div>
+                    </a>
+                
+                    <a class="animation__link__album" href="https://open.spotify.com/playlist/3UCGT7dcvKScod55bMphqd?si=482a5b476a22406a&pt=3801bf4ca66878b651649d2bfbc129c2"> 
+                        <div class="card" onmouseenter="playAudio('audio3')" onmouseleave="pauseAudio('audio3')"> 
+                            <div class="face front"> 
+                                Rock
+                                <img class="animation__link__image" src="images/album3.png"> 
+                            </div>
+                            <div class="face back"> 
+                                Nutshell
+                                <img class="animation__link__image" src="images/cape3.png">
+                            </div>
+                        </div>
+                    </a>  
+                
+                </div>
+                
+                <audio id="audio1" src="images/trap.mp3"></audio>
+                <audio id="audio2" src="images/rap.mp3"></audio>
+                <audio id="audio3" src="images/rock.mp3"></audio>
+
             </div>
 
-
-            <div class="animation"> 
-
-                <div class="card"> 
-                    <div class="face front"> 
-                        <img src="images/album1.png">
-                    </div>
-                    <div class="face back"> 
-                        teste
-                    </div>
-                </div>
-            
-                <div class="card"> 
-                    <div class="face front"> 
-                        <img src="images/album2.png">
-                    </div>
-                    <div class="face back"> 
-                        
-                    </div>
-                </div>
-            
-                <div class="card"> 
-                    <div class="face front"> 
-                        <img src="images/album3.png"> 
-                    </div>
-                    <div class="face back"> 
-                        
-                    </div>
-                </div>
-            
-            </div>
-
-            <script src="scripts/animation.js"> </script>
-
-        </section>
+        </section>   
 
     </main>
     
+    <script src="scripts/animation.js"> </script>
 </body>
 </html>
